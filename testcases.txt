@@ -1,0 +1,62 @@
+Benjamin Bancala
+cs214
+PA1
+testcases
+
+Input:
+./tokenizer "today is a beautiful day"
+Output:
+You have entered: today is a beautiful day
+word = today
+word = is
+word = a
+word = beautiful
+word = day
+
+Input:
+./tokenizer "0x4356abdc 0777 [] "
+Output:
+You have entered: 0x4356abdc 0777 []
+hex = 0x4356abdc
+octal = 0777
+c operator = [
+c operator = ]
+
+Input:
+./tokenizer "array[xyz] += pi 3.14159e-10"
+Output:
+You have entered: array[xyz] += pi 3.14159e-10
+word = array
+c operator = [
+word = xyz
+c operator = ]
+c operator = +=
+word = pi
+float = 3.14159e-10
+
+Input:
+./tokenizer "+=++{}+5342we 5049 hello 0565 0x4f24"
+Output:
+You have entered: +=++{}+5342we 5049 hello 0565 0x4f24
+c operator = +=
+c operator = ++
+c operator = {
+c operator = }
+c operator = +
+digit = 5342
+word = we
+digit = 5049
+word = hello
+octal = 0565
+hex = 0x4f24
+
+Input:
+./tokenizer ".. .5 .55 5.5554e4 5.4e-19 4.4e+12"
+Output:
+You have entered ".. .5 .55 5.5554e4 5.4e-19 4.4e+12"
+unknown = ..
+decimal = .55
+decimal = 5.5
+float = 5.5554e4
+float = 5.4e-19
+float = 4.4e+12
